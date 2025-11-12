@@ -15,8 +15,7 @@ struct Road {
     float X = 0.f, Y = 0.f, W = 0.f;
     float scale = 1.f, curve = 0.f;
 
-    std::shared_ptr<sf::Sprite> spr;   // ✅ SFML3 友好
-
+    std::shared_ptr<sf::Sprite> spr;
     int operatorIndex = 0;
     int numberIndex   = 0;
 

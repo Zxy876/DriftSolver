@@ -28,13 +28,11 @@ void Road::drawItem(sf::RenderWindow& window) {
     if (!spr) return;
 
     float s = scale * 0.3f;
-    spr->setScale({s, s}); // ✅ SFML 3 setScale(Vector2f)
+    spr->setScale({s, s});
 
     auto bounds = spr->getGlobalBounds();
-    spr->setPosition({ X - bounds.size.x / 2.f, Y - bounds.size.y });
-
-    spr->setColor(sf::Color(255, 255, 255,
-                            static_cast<uint8_t>(255 * scale)));
+    spr->setPosition({X - bounds.size.x / 2.f, Y - bounds.size.y});
+    spr->setColor(sf::Color(255, 255, 255, static_cast<uint8_t>(255 * scale)));
 
     window.draw(*spr);
 }

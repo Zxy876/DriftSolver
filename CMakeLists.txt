@@ -8,12 +8,9 @@ find_package(SFML 3 COMPONENTS System Window Graphics Audio REQUIRED)
 
 add_executable(DriftSolver
     src/main.cpp
+    src/engine/DriftEngine.cpp
     src/game/Racer.cpp
     src/game/Road.cpp
-    src/engine/DriftEngine.cpp
-    src/engine/DriftEngine.h
-    src/game/Racer.h
-    src/game/Road.h
 )
 
 target_include_directories(DriftSolver PRIVATE src)
