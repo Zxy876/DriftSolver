@@ -1,0 +1,152 @@
+#include "Racer.h"
+#include <cmath>
+#include <iostream>
+
+Road::Road(int _x, int _y, int _z, float _c, const sf::Sprite& _spr)
+    : x(_x), y(_y), z(_z), curve(_c), spr(_spr) {
+    generateItem(false);
+}
+
+void Road::generateItem(bool always) {
+    if (always || rand() % 200 == 0) {
+        operatorIndex = (rand() % 5) + 10;
+        numberIndex = rand() % 10;
+        if (numberIndex == 9) numberIndex = 0;
+    } else operatorIndex = -1;
+}
+
+void Road::project(int camX, int camY, int camZ) {
+    scale = 1.0f / (z - camZ);
+    X = (1 + (x - camX) * scale) * WinWidth / 2;
+    Y = (1 - (y - camY) * scale) * WinHeight / 2;
+    W = scale * roadWidth * WinWidth / 2;
+}
+
+void Road::drawItem(sf::RenderWindow& window) {
+    if (operatorIndex == -1) return;
+    sf::Sprite s = spr;
+    int left = (operatorIndex % 5) * itemSize;
+    int top = (operatorIndex / 5) * itemSize;
+    s.setTextureRect({left, top, itemSize, itemSize});
+    s.setScale(W / itemSize, W / itemSize);
+    s.setPosition({X - W, Y - W});
+    window.draw(s);
+}
+
+Racer::Racer() {
+    bgTexture.loadFromFile("assets/images/cloud.png");
+    itemTexture.loadFromFile("assets/images/item.png");
+    bgSprite.setTexture(bgTexture);
+    itemSprite.setTexture(itemTexture);
+
+    buffer[0].loadFromFile("assets/sounds/get.mp3");
+    buffer[1].loadFromFile("assets/sounds/jump.mp3");
+    buffer[2].loadFromFile("assets/sounds/falldown.mp3");
+    buffer[3].loadFromFile("assets/sounds/tianfuyue.mp3");
+    buffer[4].loadFromFile("assets/sounds/liumaishenjian.mp3");
+
+    bgm.setBuffer(buffer[3]);
+    bgm.setLoop(true);
+    bgm.play();
+
+    score = 0;
+    cameraX = 0;
+    cameraY = 1600;
+    cameraZ = 0;
+    speed = 100;
+    isJumping = false;
+    y = dy = 0;
+
+    for (int i = 0; i < roadCount; i++) {
+        float curve = (i > 0 && i < 300) ? 0.5 : -0.5;
+        roads.emplace_back(0, 0, (i + 1) * roadSegLength, curve, itemSprite);
+    }
+}
+
+void Racer::handleInput() {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scancode::Up)) {
+        speed += 2;
+        if (speed > 1000) speed = 1000;
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scancode::Down)) {
+        speed -= 2;
+        if (speed < 100) speed = 100;
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scancode::Left)) cameraX -= 100;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scancode::Right)) cameraX += 100;
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Scancode::Space) && !isJumping) {
+        sound.setBuffer(buffer[1]);
+        sound.play();
+        isJumping = true;
+        dy = 150;
+    }
+}
+
+void Racer::update() {
+    cameraZ += speed;
+    if (cameraZ >= roadCount * roadSegLength) cameraZ -= roadCount * roadSegLength;
+    if (cameraZ < 0) cameraZ += roadCount * roadSegLength;
+
+    if (isJumping) {
+        dy -= 5;
+        y += dy;
+        if (y <= 0) {
+            y = 0;
+            isJumping = false;
+            sound.setBuffer(buffer[2]);
+            sound.play();
+        }
+    }
+}
+
+void Racer::render(sf::RenderWindow& window) {
+    int roadIndex = cameraZ / roadSegLength;
+    float x = 0, dx = 0;
+    cameraY = 1600 + roads[roadIndex].y;
+    int minY = WinHeight;
+
+    for (int i = roadIndex; i < roadIndex + 300; ++i) {
+        Road& now = roads[i % roadCount];
+        now.project(cameraX - x, cameraY + y, cameraZ - (i >= roadCount ? roadCount * roadSegLength : 0));
+        dx += now.curve;
+        x += dx;
+        if (now.Y >= WinHeight) {
+            if (!isJumping && now.operatorIndex != -1) {
+                calculateScore(now.operatorIndex, now.numberIndex);
+                now.operatorIndex = -1;
+                roads[(i + 1500) % roadCount].generateItem(true);
+                sound.setBuffer(buffer[0]);
+                sound.play();
+            }
+        }
+        if (now.Y < minY) minY = now.Y;
+    }
+
+    for (int i = roadIndex + 300; i > roadIndex; --i)
+        roads[i % roadCount].drawItem(window);
+
+    drawNumber(window, score, 10, 10);
+}
+
+void Racer::calculateScore(int opIndex, int numIndex) {
+    char op = charItem[opIndex];
+    int num = charItem[numIndex] - '0';
+    if (op == '+') score += num;
+    else if (op == '-') score -= num;
+    else if (op == '*') score *= num;
+    else if (op == '/' && num != 0) score /= num;
+    else if (op == '%') score %= std::max(num, 1);
+}
+
+void Racer::drawNumber(sf::RenderWindow& window, int number, int x, int y) {
+    sf::Text text;
+    static sf::Font font;
+    if (!font.loadFromFile("/System/Library/Fonts/Supplemental/Arial Unicode.ttf")) return;
+    text.setFont(font);
+    text.setString(std::to_string(number));
+    text.setCharacterSize(32);
+    text.setFillColor(sf::Color::White);
+    text.setPosition({(float)x, (float)y});
+    window.draw(text);
+}
