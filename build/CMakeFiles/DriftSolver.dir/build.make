@@ -100,24 +100,10 @@ CMakeFiles/DriftSolver.dir/src/engine/DriftEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DriftSolver.dir/src/engine/DriftEngine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zxydediannao/DriftSolver/src/engine/DriftEngine.cpp -o CMakeFiles/DriftSolver.dir/src/engine/DriftEngine.cpp.s
 
-CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o: CMakeFiles/DriftSolver.dir/flags.make
-CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o: /Users/zxydediannao/DriftSolver/src/game/Racer.cpp
-CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o: CMakeFiles/DriftSolver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zxydediannao/DriftSolver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o -MF CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o.d -o CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o -c /Users/zxydediannao/DriftSolver/src/game/Racer.cpp
-
-CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zxydediannao/DriftSolver/src/game/Racer.cpp > CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.i
-
-CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zxydediannao/DriftSolver/src/game/Racer.cpp -o CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.s
-
 CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o: CMakeFiles/DriftSolver.dir/flags.make
 CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o: /Users/zxydediannao/DriftSolver/src/game/Road.cpp
 CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o: CMakeFiles/DriftSolver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zxydediannao/DriftSolver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zxydediannao/DriftSolver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o -MF CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o.d -o CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o -c /Users/zxydediannao/DriftSolver/src/game/Road.cpp
 
 CMakeFiles/DriftSolver.dir/src/game/Road.cpp.i: cmake_force
@@ -128,20 +114,34 @@ CMakeFiles/DriftSolver.dir/src/game/Road.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DriftSolver.dir/src/game/Road.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zxydediannao/DriftSolver/src/game/Road.cpp -o CMakeFiles/DriftSolver.dir/src/game/Road.cpp.s
 
+CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o: CMakeFiles/DriftSolver.dir/flags.make
+CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o: /Users/zxydediannao/DriftSolver/src/game/Racer.cpp
+CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o: CMakeFiles/DriftSolver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zxydediannao/DriftSolver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o -MF CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o.d -o CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o -c /Users/zxydediannao/DriftSolver/src/game/Racer.cpp
+
+CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zxydediannao/DriftSolver/src/game/Racer.cpp > CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.i
+
+CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zxydediannao/DriftSolver/src/game/Racer.cpp -o CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.s
+
 # Object files for target DriftSolver
 DriftSolver_OBJECTS = \
 "CMakeFiles/DriftSolver.dir/src/main.cpp.o" \
 "CMakeFiles/DriftSolver.dir/src/engine/DriftEngine.cpp.o" \
-"CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o" \
-"CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o"
+"CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o" \
+"CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o"
 
 # External object files for target DriftSolver
 DriftSolver_EXTERNAL_OBJECTS =
 
 DriftSolver: CMakeFiles/DriftSolver.dir/src/main.cpp.o
 DriftSolver: CMakeFiles/DriftSolver.dir/src/engine/DriftEngine.cpp.o
-DriftSolver: CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o
 DriftSolver: CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o
+DriftSolver: CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o
 DriftSolver: CMakeFiles/DriftSolver.dir/build.make
 DriftSolver: /opt/homebrew/lib/libsfml-graphics.3.0.2.dylib
 DriftSolver: /opt/homebrew/lib/libsfml-audio.3.0.2.dylib

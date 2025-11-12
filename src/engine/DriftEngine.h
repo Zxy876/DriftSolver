@@ -1,75 +1,74 @@
 #pragma once
-#include <string>
 #include <vector>
+#include <string>
 #include <stdexcept>
+#include <cmath>
+#include <cctype>
+#include <optional>
 
 namespace drift {
 
-// ======= Token 结构 =======
 struct Tok {
-    enum Type { Number, Op, LParen, RParen } type;
-    double value = 0.0;
-    char op = 0;
-    int prec = 0;
-    bool rightAssoc = false;
-    bool unary = false;
-
-    Tok(Type t = Number) : type(t) {}
-    Tok(Type t, double v) : type(t), value(v) {}
+    enum Type { Number, Op, LParen, RParen } type{};
+    double      value{0};
+    char        op{0};
+    int         prec{0};
+    bool        rightAssoc{false};
+    bool        unary{false};
 };
 
-// ======= 快照结构，用于调试或可视化 =======
 struct Snapshot {
-    std::vector<std::string> outputQueue;
+    std::vector<std::string> outputQueue; // (仅做调试用，可忽略)
     std::vector<std::string> opStack;
     std::vector<std::string> evalStack;
-    std::string note;
+    std::string              note;
 };
 
-// ======= 主引擎类 =======
 class DriftEngine {
 public:
-    // 解析 + 计算 API
-    bool setExpression(const std::string& expr);
+    // 解析 + 求值（一次性）
+    bool   setExpression(const std::string& expr);
     double evaluate(const std::string& expr);
     double evaluateCached();
-    std::string toPostfixString() const;
-    void clear();
 
-    // 事件式 API（用于赛车漂移动态构造表达式）
-    void pushOperand(double v);
-    void pushOperator(char op);
-    bool reduce();        // 执行一次规约（若可规约）
-    void reduceOnce();    // 强制规约一步
-    double finalize();    // 完成整个计算
+    // DSL/事件式累积（本项目里主要用一次性 evaluate）
+    void   pushOperand(double v);
+    void   pushOperator(char op);
+    bool   reduce();
+    double finalize();
 
-    // 快照（用于可视化或调试）
+    // 维护
+    void   clear();
+
+    // 调试（可选）
+    std::string toPostfixString() const { return {}; }
     const std::vector<Snapshot>& steps() const { return steps_; }
 
 private:
-    // 内部结构
+    // 词法 + 语法
+    static bool  isOp(char c);
+    static int   precedence(char c, bool unary, bool& rightAssoc);
+    static std::string tokToString(const Tok& t);
+
+    void tokenize(const std::string& s, std::vector<Tok>& out);
+    void infixToPostfix();
+    double evalPostfix();
+
+    // 可视化快照（可选）
+    void snapShunting(const std::vector<Tok>& out, const std::vector<Tok>& ops, const std::string& note);
+    void snapEval(const std::vector<double>& st, const std::string& note);
+    void reduceOnce();
+
+private:
     std::string expr_;
     std::vector<Tok> infix_;
     std::vector<Tok> postfix_;
     std::vector<Snapshot> steps_;
 
-    std::vector<Tok>    runtimeOps_;
+    // 事件式（可选）
     std::vector<double> runtimeVals_;
+    std::vector<Tok>    runtimeOps_;
     bool lastWasValue_ = false;
-
-    // 内部方法
-    void tokenize(const std::string& s, std::vector<Tok>& out);
-    void infixToPostfix();
-    double evalPostfix();
-
-    // 工具函数
-    static bool isOp(char c);
-    static int precedence(char c, bool unary, bool& rightAssoc);
-    static std::string tokToString(const Tok& t);
-
-    // 快照记录函数
-    void snapShunting(const std::vector<Tok>& out, const std::vector<Tok>& ops, const std::string& note);
-    void snapEval(const std::vector<double>& st, const std::string& note);
 };
 
 } // namespace drift

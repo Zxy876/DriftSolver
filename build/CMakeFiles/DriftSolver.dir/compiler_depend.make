@@ -1461,7 +1461,6 @@ CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o: /Users/zxydediannao/DriftSolver
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/utility \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/variant \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/vector \
@@ -1621,25 +1620,6 @@ CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o: /Users/zxydediannao/DriftSolver
   /Users/zxydediannao/DriftSolver/src/engine/DriftEngine.h \
   /Users/zxydediannao/DriftSolver/src/game/Racer.h \
   /Users/zxydediannao/DriftSolver/src/game/Road.h \
-  /opt/homebrew/include/SFML/Audio.hpp \
-  /opt/homebrew/include/SFML/Audio/AudioResource.hpp \
-  /opt/homebrew/include/SFML/Audio/Export.hpp \
-  /opt/homebrew/include/SFML/Audio/InputSoundFile.hpp \
-  /opt/homebrew/include/SFML/Audio/Listener.hpp \
-  /opt/homebrew/include/SFML/Audio/Music.hpp \
-  /opt/homebrew/include/SFML/Audio/OutputSoundFile.hpp \
-  /opt/homebrew/include/SFML/Audio/PlaybackDevice.hpp \
-  /opt/homebrew/include/SFML/Audio/Sound.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundBuffer.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundBufferRecorder.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundChannel.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundFileFactory.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundFileFactory.inl \
-  /opt/homebrew/include/SFML/Audio/SoundFileReader.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundFileWriter.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundRecorder.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundSource.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundStream.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -3281,7 +3261,6 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/utility \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/variant \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/vector \
@@ -3441,25 +3420,6 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
   /Users/zxydediannao/DriftSolver/src/engine/DriftEngine.h \
   /Users/zxydediannao/DriftSolver/src/game/Racer.h \
   /Users/zxydediannao/DriftSolver/src/game/Road.h \
-  /opt/homebrew/include/SFML/Audio.hpp \
-  /opt/homebrew/include/SFML/Audio/AudioResource.hpp \
-  /opt/homebrew/include/SFML/Audio/Export.hpp \
-  /opt/homebrew/include/SFML/Audio/InputSoundFile.hpp \
-  /opt/homebrew/include/SFML/Audio/Listener.hpp \
-  /opt/homebrew/include/SFML/Audio/Music.hpp \
-  /opt/homebrew/include/SFML/Audio/OutputSoundFile.hpp \
-  /opt/homebrew/include/SFML/Audio/PlaybackDevice.hpp \
-  /opt/homebrew/include/SFML/Audio/Sound.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundBuffer.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundBufferRecorder.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundChannel.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundFileFactory.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundFileFactory.inl \
-  /opt/homebrew/include/SFML/Audio/SoundFileReader.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundFileWriter.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundRecorder.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundSource.hpp \
-  /opt/homebrew/include/SFML/Audio/SoundStream.hpp \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -3622,6 +3582,8 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
 
 /opt/homebrew/include/SFML/Graphics/Font.hpp:
 
+/opt/homebrew/include/SFML/Graphics/Export.hpp:
+
 /opt/homebrew/include/SFML/Graphics/Drawable.hpp:
 
 /opt/homebrew/include/SFML/Graphics/ConvexShape.hpp:
@@ -3630,39 +3592,11 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
 
 /opt/homebrew/include/SFML/Config.hpp:
 
-/opt/homebrew/include/SFML/Audio/SoundSource.hpp:
-
-/opt/homebrew/include/SFML/Audio/SoundRecorder.hpp:
-
-/opt/homebrew/include/SFML/Audio/SoundFileWriter.hpp:
-
-/opt/homebrew/include/SFML/Audio/SoundFileReader.hpp:
-
-/opt/homebrew/include/SFML/Audio/SoundFileFactory.inl:
-
-/opt/homebrew/include/SFML/Audio/SoundFileFactory.hpp:
-
-/opt/homebrew/include/SFML/Audio/SoundBufferRecorder.hpp:
-
-/opt/homebrew/include/SFML/Audio/SoundBuffer.hpp:
-
-/opt/homebrew/include/SFML/Audio/PlaybackDevice.hpp:
-
-/opt/homebrew/include/SFML/Audio/OutputSoundFile.hpp:
-
-/opt/homebrew/include/SFML/Audio/Music.hpp:
-
-/opt/homebrew/include/SFML/Graphics/Export.hpp:
-
-/opt/homebrew/include/SFML/Audio/Listener.hpp:
-
 /Users/zxydediannao/DriftSolver/src/game/Road.h:
 
 /opt/homebrew/include/SFML/Graphics/Rect.hpp:
 
 /Users/zxydediannao/DriftSolver/src/game/Racer.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list:
 
@@ -3697,8 +3631,6 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_rsize_t.h:
 
 /Users/zxydediannao/DriftSolver/src/engine/DriftEngine.h:
-
-/opt/homebrew/include/SFML/Audio/InputSoundFile.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h:
 
@@ -3874,8 +3806,6 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/__endian.h:
 
-/opt/homebrew/include/SFML/Audio/Sound.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/limits.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/endian.h:
@@ -3951,8 +3881,6 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/streambuf.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/format:
-
-/opt/homebrew/include/SFML/Audio/SoundStream.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/exception:
 
@@ -4221,8 +4149,6 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_convertible.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_gid_t.h:
-
-/opt/homebrew/include/SFML/Audio.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_compound.h:
 
@@ -4561,8 +4487,6 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/_endian.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo:
-
-/opt/homebrew/include/SFML/Audio/AudioResource.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:
 
@@ -4934,8 +4858,6 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
 
-/opt/homebrew/include/SFML/Audio/Export.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/ranges_operations.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/check_memory_order.h:
@@ -5115,8 +5037,6 @@ CMakeFiles/DriftSolver.dir/src/main.cpp.o: /Users/zxydediannao/DriftSolver/src/m
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_const.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_time.h:
-
-/opt/homebrew/include/SFML/Audio/SoundChannel.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_sorted_until.h:
 

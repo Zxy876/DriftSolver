@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/zxydediannao/DriftSolver/src -isystem /opt/homebrew/include
+CXX_INCLUDES = -I/Users/zxydediannao/DriftSolver/src -I/Users/zxydediannao/DriftSolver/src/engine -I/Users/zxydediannao/DriftSolver/src/game -isystem /opt/homebrew/include
 
 CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
 
