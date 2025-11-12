@@ -4,14 +4,17 @@ project(DriftSolver)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# SFML 3.x 版本
 find_package(SFML 3 COMPONENTS System Window Graphics Audio REQUIRED)
 
-file(GLOB SRC_FILES CONFIGURE_DEPENDS
-    src/*.cpp
-    src/*/*.cpp
+add_executable(DriftSolver
+    src/main.cpp
+    src/game/Racer.cpp
+    src/game/Road.cpp
+    src/engine/DriftEngine.cpp
+    src/engine/DriftEngine.h
+    src/game/Racer.h
+    src/game/Road.h
 )
 
-add_executable(DriftSolver ${SRC_FILES})
 target_include_directories(DriftSolver PRIVATE src)
 target_link_libraries(DriftSolver PRIVATE SFML::System SFML::Window SFML::Graphics SFML::Audio)

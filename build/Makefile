@@ -113,7 +113,6 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /Users/zxydediannao/DriftSolver/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -129,6 +128,78 @@ DriftSolver: cmake_check_build_system
 DriftSolver/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/build
 .PHONY : DriftSolver/fast
+
+src/engine/DriftEngine.o: src/engine/DriftEngine.cpp.o
+.PHONY : src/engine/DriftEngine.o
+
+# target to build an object file
+src/engine/DriftEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/src/engine/DriftEngine.cpp.o
+.PHONY : src/engine/DriftEngine.cpp.o
+
+src/engine/DriftEngine.i: src/engine/DriftEngine.cpp.i
+.PHONY : src/engine/DriftEngine.i
+
+# target to preprocess a source file
+src/engine/DriftEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/src/engine/DriftEngine.cpp.i
+.PHONY : src/engine/DriftEngine.cpp.i
+
+src/engine/DriftEngine.s: src/engine/DriftEngine.cpp.s
+.PHONY : src/engine/DriftEngine.s
+
+# target to generate assembly for a file
+src/engine/DriftEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/src/engine/DriftEngine.cpp.s
+.PHONY : src/engine/DriftEngine.cpp.s
+
+src/game/Racer.o: src/game/Racer.cpp.o
+.PHONY : src/game/Racer.o
+
+# target to build an object file
+src/game/Racer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.o
+.PHONY : src/game/Racer.cpp.o
+
+src/game/Racer.i: src/game/Racer.cpp.i
+.PHONY : src/game/Racer.i
+
+# target to preprocess a source file
+src/game/Racer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.i
+.PHONY : src/game/Racer.cpp.i
+
+src/game/Racer.s: src/game/Racer.cpp.s
+.PHONY : src/game/Racer.s
+
+# target to generate assembly for a file
+src/game/Racer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/src/game/Racer.cpp.s
+.PHONY : src/game/Racer.cpp.s
+
+src/game/Road.o: src/game/Road.cpp.o
+.PHONY : src/game/Road.o
+
+# target to build an object file
+src/game/Road.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/src/game/Road.cpp.o
+.PHONY : src/game/Road.cpp.o
+
+src/game/Road.i: src/game/Road.cpp.i
+.PHONY : src/game/Road.i
+
+# target to preprocess a source file
+src/game/Road.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/src/game/Road.cpp.i
+.PHONY : src/game/Road.cpp.i
+
+src/game/Road.s: src/game/Road.cpp.s
+.PHONY : src/game/Road.s
+
+# target to generate assembly for a file
+src/game/Road.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DriftSolver.dir/build.make CMakeFiles/DriftSolver.dir/src/game/Road.cpp.s
+.PHONY : src/game/Road.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -163,6 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DriftSolver"
+	@echo "... src/engine/DriftEngine.o"
+	@echo "... src/engine/DriftEngine.i"
+	@echo "... src/engine/DriftEngine.s"
+	@echo "... src/game/Racer.o"
+	@echo "... src/game/Racer.i"
+	@echo "... src/game/Racer.s"
+	@echo "... src/game/Road.o"
+	@echo "... src/game/Road.i"
+	@echo "... src/game/Road.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -177,7 +257,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /Users/zxydediannao/DriftSolver/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
